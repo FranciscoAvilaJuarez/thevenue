@@ -9,10 +9,30 @@ import SideDrawer from './SideDrawer.js';
 
 class Header extends Component {
 
-    //state for SideDrawer to always to be closed chkln39
+    //state for SideDrawer to always to be closed
     state={
-        drawerOpen:false
+        drawerOpen:false,
+        headerShow:false
     }
+    //crolling for changing from header from tranparent to black 
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    //scrollY is checking the 'Y axis' only 
+    handleScroll=()=>{
+        if(window.scrollY > 0 ){
+            this.setState({
+                headerShow:true 
+            })
+        }else{
+            this.setState({
+                headerShow:false 
+            })
+        }
+    }
+
+
+    //Drawer tate  
     toggleDrawer= (value)=> {
         this.setState({
             drawerOpen: value  
@@ -24,7 +44,7 @@ class Header extends Component {
             <AppBar
                 position ="fixed"
                 style = {{
-                    backgroundColor: '#2f2f2f',
+                    backgroundColor: this.state.headerShow ? '#2f2f2f': 'transparent',
                     boxShadow: 'none',
                     padding: '10px 0px'
                 }}

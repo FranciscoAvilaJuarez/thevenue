@@ -21,7 +21,7 @@ const SideDrawer = (props)=> {
                 <ListItem button onClick= {()=> console.log ('Venue info')}>
                     Venue info
                 </ListItem>
-
+        
                 <ListItem button onClick= {()=> console.log ('Highlights')}>
                     Highlights
                 </ListItem>
