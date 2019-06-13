@@ -1,17 +1,40 @@
-import react from 'react';
+import React from 'react';
 
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
+//stateless component, no need for 'this.props'
 const SideDrawer = (props)=> {
     return (
         <Drawer
             anchor="right"
-            open={}
-            onClose={()=>} 
+            open={props.open}
+            onClose={()=>props.onClose(false)}  
         >
-            drawer
+            <List component="nav">
+
+                <ListItem button onClick= {()=> console.log ('Featured')}>
+                    Event starts in
+                </ListItem>
+
+                <ListItem button onClick= {()=> console.log ('Venue info')}>
+                    Venue info
+                </ListItem>
+
+                <ListItem button onClick= {()=> console.log ('Highlights')}>
+                    Highlights
+                </ListItem>
+
+                <ListItem button onClick= {()=> console.log ('Pricing')}>
+                    Pricing 
+                </ListItem>
+
+                <ListItem button onClick= {()=> console.log ('Location')}>
+                    Location 
+                </ListItem>
+                
+            </List>
         </Drawer>
     );
 };
