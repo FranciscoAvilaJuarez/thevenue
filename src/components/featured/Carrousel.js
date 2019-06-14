@@ -1,9 +1,11 @@
 import React from 'react'; 
 
 import Slider from "react-slick";
-import slide_one from '../../resources/images/mrkitty2.jpg';
-import slide_two from '../../resources/images/mrkitty6.jpg';
-import slide_three from '../../resources/images/mrkitty4.jpg';
+
+import slide_one from '../../resources/images/mrkitty3.jpg';
+import slide_two from '../../resources/images/mrkitty4.jpg';
+import slide_three from '../../resources/images/mrkitty6.jpg';
+import slide_four from '../../resources/images/mrkitty5.jpg';
 
 const Carrousel = ()=> {
 
@@ -18,7 +20,7 @@ const Carrousel = ()=> {
     <div
         className="carrousel_wrapper"
         style={{
-            height: `${window.innerHeight}px`,
+            height:`${window.innerHeight}px`,
             overflow: 'hidden'
         }}
     >
@@ -28,7 +30,7 @@ const Carrousel = ()=> {
                     className='carrousel_image'
                     style= {{
                         background:`url(${slide_one})`,
-                        height: `${window.innerHeight}px`,
+                        height:`${window.innerHeight}px`
                     }}
                 ></div>
             </div>
@@ -38,7 +40,7 @@ const Carrousel = ()=> {
                     className='carrousel_image'
                     style= {{
                         background:`url(${slide_two})`,
-                        height: `${window.innerHeight}px`,
+                        height:`${window.innerHeight}px`
                     }}
                 ></div>
             </div>
@@ -48,7 +50,17 @@ const Carrousel = ()=> {
                     className='carrousel_image'
                     style= {{
                         background:`url(${slide_three})`,
-                        height: `${window.innerHeight}px`,
+                        height: `${window.innerHeight}px`
+                    }}
+                ></div>
+            </div>
+
+            <div>
+                <div 
+                    className='carrousel_image'
+                    style= {{
+                        background:`url(${slide_four})`,
+                        height: `${window.innerHeight}px`
                     }}
                 ></div>
             </div>
