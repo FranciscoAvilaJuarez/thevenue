@@ -2,7 +2,7 @@ import React from 'react';
 
 import Slider from "react-slick";
 import slide_one from '../../resources/images/mrkitty2.jpg';
-import slide_two from '../../resources/images/mrkitty3.jpg';
+import slide_two from '../../resources/images/mrkitty6.jpg';
 import slide_three from '../../resources/images/mrkitty4.jpg';
 
 const Carrousel = ()=> {
